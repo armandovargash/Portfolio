@@ -1,6 +1,10 @@
 /* style.css - Capa Crítica Estricta */
 
-/* Dark Mode Profundo Forzado */
+/* Dark Mode Profundo Forzado y Scroll Padding */
+html {
+    scroll-padding-top: 5rem;
+}
+
 body {
     background-color: #000000;
 }
