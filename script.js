@@ -213,12 +213,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const tags = data.stack.map(t => `<span class="px-3 py-1 bg-white/10 text-xs font-semibold rounded-full">${t}</span>`).join('');
 
-            projectModalBody.innerHTML = `
-                <div class="space-y-8 animate-fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-white">${data.title}</h2>
-                    <div class="p-6 bg-[#141414] border border-white/10 rounded-2xl inline-block">
+            let mediaContent = '';
+            if (id === 'gostretch') {
+                // If it's GoStretch, inject the Scratch iframe
+                mediaContent = `
+                    <div class="mt-8 mb-6 rounded-2xl overflow-hidden border border-white/10 bg-black flex justify-center items-center w-full aspect-video md:aspect-auto">
+                        <iframe src="https://scratch.mit.edu/projects/1280941716/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen class="max-w-full h-auto"></iframe>
+                    </div>
+                `;
+            } else if (id === 'bahia') {
+                mediaContent = `
+                    <div class="p-6 bg-[#141414] border border-white/10 rounded-2xl inline-block mb-6 mt-4">
                         <p class="text-xl md:text-2xl font-bold text-white tracking-tight">${data.metrics}</p>
                     </div>
+                    <div class="mb-8">
+                        <a href="https://montaraz.wixsite.com/bahia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">
+                            Ver Proyecto en Vivo (Wix) <span>↗</span>
+                        </a>
+                    </div>
+                `;
+            } else {
+                // Default metrics block for others
+                mediaContent = `
+                    <div class="p-6 bg-[#141414] border border-white/10 rounded-2xl inline-block mb-6 mt-4">
+                        <p class="text-xl md:text-2xl font-bold text-white tracking-tight">${data.metrics}</p>
+                    </div>
+                `;
+            }
+
+            projectModalBody.innerHTML = `
+                <div class="space-y-6 animate-fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-white">${data.title}</h2>
+                    ${mediaContent}
                     <div>
                         <h4 class="text-lg font-bold text-white mb-2">Contexto y Decisiones</h4>
                         <p class="text-accentMuted leading-relaxed text-lg">${data.context}</p>
