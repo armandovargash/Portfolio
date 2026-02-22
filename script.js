@@ -190,15 +190,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 metrics: '-100% Tiempos de Ingeniería',
                 context: 'P&L Ownership: Como fundador, no había presupuesto para suposiciones. Necesitaba validar si la app curaba algún dolor real antes de escribir backend nativo.',
                 execution: 'Trade-off: Sacrifiqué código nativo perfecto por velocidad de mercado. Usé IA (Claude Code) para el front y automatizaciones puras para lógica transaccional. De-Risking desde el día 1.',
-                stack: ['Claude Code', 'React Native', 'Automatización']
+                systemBehavior: 'HITL & Failure Analysis: Mantenimiento de determinismo en los flujos core. Las alucinaciones se mitigaron forzando al LLM a un esquema de salida estricto. Casos médicos agudos derivan a Human-in-the-Loop.',
+                unitEconomics: 'Inferencia de coste cero durante el MVP vs. €15k proyectados de desarrollo inicial. Riesgo de mercado invalidado con $0 de burn rate en servidores.',
+                stack: ['Claude Code', 'React Native', 'Automatización', 'AI Unit Economics']
             },
             'merkit': {
                 title: 'Merkit: B2B Plataforma',
                 logo: 'assets/logos/merkit.png',
                 metrics: '€120k Seed | 2x ARR',
-                context: 'Las ONGs se ahogaban en Excel opacos gestionando donaciones corporativas. El descubrimiento de producto apuntó que el cliente real era el donante (enterprise), no el usuario.',
+                context: 'Las ONGs se ahogaban en Excel opacos gestionando donaciones corporativas. El descubrimiento de producto apuntó que el cliente real era el donante (enterprise), no el usuario subyacente.',
                 execution: 'Como Product Owner, bloqueé el desarrollo genérico y apliqué Scrum paramilitar a 10 ingenieros offshore para destrabar exclusivamente el dashboard que nos permitió levantar ronda.',
-                stack: ['Vue.js', 'Node.js', 'PostgreSQL', 'Scrum']
+                systemBehavior: 'Data Governance: Auditoría estricta de privacidad de datos enterprise, garantizando trazabilidad total de donaciones para cumplimiento normativo (Compliance).',
+                unitEconomics: 'Reducción transversal del SLA operativo. 2x de crecimiento operativo asimilado sin incrementar el head-count de soporte logístico.',
+                stack: ['Data Governance', 'PostgreSQL', 'Scrum', 'Stakeholder Management']
             },
             'bahia': {
                 title: 'Montaraz Mascotas',
@@ -206,16 +210,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 metrics: 'Rentabilidad Pura',
                 context: 'El Product Discovery apuntaba a la inercia operacional. Aplicando Ingeniería de Contexto, detectamos que la deuda técnica y los ERPs convencionales asfixiaban el margen. La ambigüedad del mercado exigía un sistema sin fricción.',
                 execution: 'Orquestación táctica de Vibe Coding. Cero desarrollo innecesario. Desplegamos una solución automatizada fluida que eliminó el ruido y conectó directamente la operación con la validación de negocio.',
-                stack: ['Shopify Plus', 'Notion', 'Ingeniería de Contexto'],
-                link: 'https://montarazmascotas.wixsite.com/montaraz-mascotas/nosotros'
+                systemBehavior: 'System Determinism: Se descartó el uso de asistentes probabilísticos no acotados en favor de una capa orquestal rígida (Notion + Shopify Plus), asegurando disponibilidad 99.9% en inventario.',
+                unitEconomics: 'Tiempos de reposición acortados y coste marginal de transacciones reducido a un mínimo automatizado, maximizando el P&L ownership.',
+                stack: ['Shopify Plus', 'Notion', 'Ingeniería de Contexto', 'System Logic']
             },
             'scratch': {
                 title: 'Validación Lógica (Scratch)',
                 logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Scratch_logo.svg',
                 metrics: 'Vibe Coding',
-                context: 'La ideación es barata; la estructura es clave. En entornos de alta incertidumbre (Zero-to-One), se necesita prototipar la lógica transaccional antes del código. El objetivo: probar sistemas complejos sin escribir ingeniería tradicional.',
-                execution: 'Aplicación pura de Ingeniería de Contexto. Ensamblé un motor lógico funcional en Scratch para validar rápidamente el flujo y someterlo a iteración bajo presión. Una simulación de producto sin el peso histórico corporativo.',
-                stack: ['Lógica Computacional', 'Prototipado', 'Zero-to-One']
+                context: 'La ideación es barata; la estructura es clave. En entornos de alta incertidumbre (Zero-to-One), se necesita prototipar la lógica transaccional y el "System Behavior" antes del código en producción.',
+                execution: 'Ensamblé un motor lógico funcional en Scratch para validar rápidamente el flujo. Una simulación estructurada que modela los estados del sistema sin el peso corporativo.',
+                systemBehavior: 'Explainability & Prototyping: Validación visual interactiva del comportamiento de objetos. Los Stakeholders pueden auditar el proceso de decisión de forma transparente.',
+                unitEconomics: 'Prototipado puro: Riesgo de arquitectura mitigado en un 100% horas antes de involucrar al equipo T-Shaped.',
+                stack: ['Lógica Computacional', 'Explainability', 'Zero-to-One']
             }
         };
 
@@ -263,14 +270,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-white">${data.title}</h2>
                     ${mediaContent}
                     <div>
-                        <h4 class="text-lg font-bold text-white mb-2">Contexto y Decisiones</h4>
-                        <p class="text-accentMuted leading-relaxed text-lg">${data.context}</p>
+                        <h4 class="text-sm font-mono uppercase tracking-widest text-accentMuted mb-2">Background & Context</h4>
+                        <p class="text-white leading-relaxed text-lg border-l-2 border-white/20 pl-4 py-1">${data.context}</p>
                     </div>
                     <div>
-                        <h4 class="text-lg font-bold text-white mb-2">La Ejecución</h4>
-                        <p class="text-accentMuted leading-relaxed text-lg">${data.execution}</p>
+                        <h4 class="text-sm font-mono uppercase tracking-widest text-accentMuted mb-2">Tactical Execution</h4>
+                        <p class="text-white leading-relaxed text-lg border-l-2 border-white/20 pl-4 py-1">${data.execution}</p>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-4">
+                    ${data.systemBehavior ? `
+                    <div class="bg-[#141414] p-5 rounded-xl border border-white/10 mt-6">
+                        <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-white mb-2 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-white block"></span> System Behavior & Risk Mitigation</h4>
+                        <p class="text-accentMuted leading-relaxed text-base">${data.systemBehavior}</p>
+                    </div>
+                    ` : ''}
+                    ${data.unitEconomics ? `
+                    <div class="bg-black p-5 rounded-xl border border-white/10 border-l-4 border-l-white mt-4">
+                        <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-white mb-2 flex items-center gap-2">AI Unit Economics & Impact</h4>
+                        <p class="text-accentMuted leading-relaxed text-base">${data.unitEconomics}</p>
+                    </div>
+                    ` : ''}
+                    <div class="flex flex-wrap gap-2 pt-6">
                         ${tags}
                     </div>
                     ${data.link ? `<div class="pt-8"><a href="${data.link}" target="_blank" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:opacity-80 transition-opacity inline-flex items-center gap-2 tracking-tight">Ver Producto en Vivo <span class="text-sm">↗</span></a></div>` : ''}
