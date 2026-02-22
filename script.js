@@ -199,11 +199,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 stack: ['Vue.js', 'Node.js', 'PostgreSQL', 'Scrum']
             },
             'bahia': {
-                title: 'Montaraz / Bahía Índigo',
-                metrics: 'Cero Deuda Técnica',
-                context: 'E-commerce. Caos logístico e inercia anticuada en operaciones en Excel y libretas.',
-                execution: 'Mentalidad de Ejecución Directa: Cero inversión en ERPs legacy costosos. Centralicé todo el manual operativo y stock en bases de datos funcionales en Notion y migré el frontal a Shopify Plus optimizado en SEO.',
-                stack: ['Shopify Plus', 'Notion', 'SEO Técnico']
+                title: 'Montaraz Mascotas',
+                metrics: 'Rentabilidad Pura',
+                context: 'El Product Discovery apuntaba a la inercia operacional. Aplicando Ingeniería de Contexto, detectamos que la deuda técnica y los ERPs convencionales asfixiaban el margen. La ambigüedad del mercado exigía un sistema sin fricción.',
+                execution: 'Orquestación táctica de Vibe Coding. Cero desarrollo innecesario. Desplegamos una solución automatizada fluida que eliminó el ruido y conectó directamente la operación con la validación de negocio.',
+                stack: ['Shopify Plus', 'Notion', 'Ingeniería de Contexto'],
+                link: 'https://montarazmascotas.wixsite.com/montaraz-mascotas/nosotros'
+            },
+            'scratch': {
+                title: 'Validación Lógica (Scratch)',
+                metrics: 'Vibe Coding',
+                context: 'La ideación es barata; la estructura es clave. En entornos de alta incertidumbre (Zero-to-One), se necesita prototipar la lógica transaccional antes del código. El objetivo: probar sistemas complejos sin escribir ingeniería tradicional.',
+                execution: 'Aplicación pura de Ingeniería de Contexto. Ensamblé un motor lógico funcional en Scratch para validar rápidamente el flujo y someterlo a iteración bajo presión. Una simulación de producto sin el peso histórico corporativo.',
+                stack: ['Lógica Computacional', 'Prototipado', 'Zero-to-One'],
+                iframe: './scratch-game.html'
             }
         };
 
@@ -256,6 +265,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="flex flex-wrap gap-2 pt-4">
                         ${tags}
                     </div>
+                    ${data.link ? `<div class="pt-8"><a href="${data.link}" target="_blank" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:opacity-80 transition-opacity inline-flex items-center gap-2 tracking-tight">Ver Producto en Vivo <span class="text-sm">↗</span></a></div>` : ''}
+                    ${data.iframe ? `<div class="pt-8 w-full"><div class="w-full aspect-video bg-black border border-white/10 rounded-2xl overflow-hidden relative"><iframe src="${data.iframe}" class="absolute inset-0 w-full h-full border-0"></iframe></div></div>` : ''}
                 </div>
             `;
 
