@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const projectData = {
             'gostretch': {
                 title: 'GoStretch: Wellness Tech',
+                logo: 'assets/logos/gostretch.png',
                 metrics: '-100% Tiempos de Ingeniería',
                 context: 'P&L Ownership: Como fundador, no había presupuesto para suposiciones. Necesitaba validar si la app curaba algún dolor real antes de escribir backend nativo.',
                 execution: 'Trade-off: Sacrifiqué código nativo perfecto por velocidad de mercado. Usé IA (Claude Code) para el front y automatizaciones puras para lógica transaccional. De-Risking desde el día 1.',
@@ -193,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             'merkit': {
                 title: 'Merkit: B2B Plataforma',
+                logo: 'assets/logos/merkit.png',
                 metrics: '€120k Seed | 2x ARR',
                 context: 'Las ONGs se ahogaban en Excel opacos gestionando donaciones corporativas. El descubrimiento de producto apuntó que el cliente real era el donante (enterprise), no el usuario.',
                 execution: 'Como Product Owner, bloqueé el desarrollo genérico y apliqué Scrum paramilitar a 10 ingenieros offshore para destrabar exclusivamente el dashboard que nos permitió levantar ronda.',
@@ -200,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             'bahia': {
                 title: 'Montaraz Mascotas',
+                logo: 'assets/logos/montaraz.png',
                 metrics: 'Rentabilidad Pura',
                 context: 'El Product Discovery apuntaba a la inercia operacional. Aplicando Ingeniería de Contexto, detectamos que la deuda técnica y los ERPs convencionales asfixiaban el margen. La ambigüedad del mercado exigía un sistema sin fricción.',
                 execution: 'Orquestación táctica de Vibe Coding. Cero desarrollo innecesario. Desplegamos una solución automatizada fluida que eliminó el ruido y conectó directamente la operación con la validación de negocio.',
@@ -208,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             'scratch': {
                 title: 'Validación Lógica (Scratch)',
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Scratch_logo.svg',
                 metrics: 'Vibe Coding',
                 context: 'La ideación es barata; la estructura es clave. En entornos de alta incertidumbre (Zero-to-One), se necesita prototipar la lógica transaccional antes del código. El objetivo: probar sistemas complejos sin escribir ingeniería tradicional.',
                 execution: 'Aplicación pura de Ingeniería de Contexto. Ensamblé un motor lógico funcional en Scratch para validar rápidamente el flujo y someterlo a iteración bajo presión. Una simulación de producto sin el peso histórico corporativo.',

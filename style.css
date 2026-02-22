@@ -82,3 +82,33 @@ input:-webkit-autofill:active {
     transition-duration: 100ms !important;
     transition-timing-function: ease-out !important;
 }
+
+/* Branding: Monochromatic Logos */
+.project-logo {
+    height: 2.5rem;
+    width: auto;
+    filter: grayscale(100%) brightness(200%) contrast(150%) opacity(80%) drop-shadow(0 0 0 transparent);
+    mix-blend-mode: screen;
+    /* Makes black backgrounds in logos transparent */
+    transition: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    pointer-events: none;
+    margin-bottom: 1.5rem;
+}
+
+.glass-card:hover .project-logo {
+    filter: grayscale(100%) brightness(400%) opacity(100%);
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* GoStretch Logo Exception: Retain Original Colors */
+.glass-card[data-project="gostretch"] .project-logo {
+    filter: drop-shadow(0 0 0 transparent);
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+
+.glass-card[data-project="gostretch"]:hover .project-logo {
+    filter: drop-shadow(0 0 0 transparent);
+    transform: translateY(-4px) scale(1.05);
+    opacity: 1;
+}
