@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System | Armando Vargas | Zero-to-One</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config for Deep Dark Apple Style -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        /* 1. Core Colors (Brutalism x Apple) */
+                        sysBg: '#000000',                 /* Absolute Black */
+                        sysSurfaceHover: '#141414',       /* Hover Elevación sin Sombras */
+                        sysTextPrimary: '#FFFFFF',        /* Contraste Extremo */
+                        sysTextMuted: '#888888',          /* Jerarquía Secundaria */
+                        sysBorder: 'rgba(255, 255, 255, 0.10)', /* Pura Geometría */
+                        sysGlass: 'rgba(255, 255, 255, 0.03)'   /* Apple Glass Base */
+                    },
+                    fontFamily: {
+                        /* 2. Tipografía (Apple Human Interface + Inter) */
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    },
+                    letterSpacing: {
+                        /* 3. Tracking Cerrado (Premium Feel) */
+                        tighter: '-.04em',
+                        tight: '-.02em',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* CSS Base Tokens (El paso antes de Figma Variables) */
+
+        body {
+            background-color: #000000;
+        }
+
+        /* 4. Físicas (Apple Spring) */
+        .spring-transition {
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+        }
+
+        .tap-down:active {
+            transform: scale(0.96);
+            transition-duration: 100ms !important;
+            transition-timing-function: ease-out !important;
+        }
+
+        /* 5. Liquid Glass Apple Formula */
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(24px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+
+        /* 6. Adiós Sombras */
+        .no-shadows-ever {
+            box-shadow: none !important;
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) !important;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-sysBg text-sysTextPrimary font-sans antialiased selection:bg-white selection:text-black min-h-screen p-8 md:p-16">
+
+    <header class="mb-16 border-b border-sysBorder pb-8">
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-2">Design System: <span
+                class="opacity-50">Zero-to-One</span></h1>
+        <p class="text-sysTextMuted text-lg font-medium">Fuente de verdad documentada en código antes del Figma Asset
+            Library.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto space-y-24">
+
+        <!-- SECTION: TIPOGRAFÍA -->
+        <section>
+            <div class="mb-8">
+                <h2
+                    class="text-2xl font-bold tracking-tight text-white mb-1 uppercase text-xs opacity-50 tracking-widest font-mono">
+                    01. Font Tokens</h2>
+                <hr class="border-sysBorder">
+            </div>
+
+            <div class="space-y-12">
+                <div>
+                    <span class="text-sysTextMuted text-sm font-mono block mb-2">Display (H1) - class: text-[7.5rem]
+                        font-black tracking-tighter</span>
+                    <h1 class="text-6xl md:text-[6rem] font-black tracking-tighter leading-[1.05]">
+                        Brutalismo<br>Matemático.</h1>
+                </div>
+                <div>
+                    <span class="text-sysTextMuted text-sm font-mono block mb-2">Title 1 (H2) - class: text-5xl
+                        font-bold tracking-tight</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Componentes del Sistema</h2>
+                </div>
+                <div>
+                    <span class="text-sysTextMuted text-sm font-mono block mb-2">Body Text (P) - class: text-xl
+                        font-light text-sysTextMuted</span>
+                    <p class="text-xl text-sysTextMuted leading-relaxed max-w-3xl font-light">Este es el cuerpo del
+                        texto estándar para descripciones largas o narrativas de producto. Mide un alto contraste
+                        respecto al fondo (contraste de jerarquía), pero nunca es un blanco puro para no quemar las
+                        retinas en entornos oscuros. Pura legibilidad operativa.</p>
+                </div>
+                <div>
+                    <span class="text-sysTextMuted text-sm font-mono block mb-2">Microcopy/Metadata - class: text-xs
+                        uppercase tracking-widest font-semibold</span>
+                    <span class="text-xs font-semibold text-sysTextMuted uppercase tracking-widest">Metadatos de
+                        Sistema</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: COMPONENTES DE ACCIÓN (BOTONES) -->
+        <section>
+            <div class="mb-8">
+                <h2
+                    class="text-2xl font-bold tracking-tight text-white mb-1 uppercase text-xs opacity-50 tracking-widest font-mono">
+                    02. CTA Tokens (Adiós Ghost Buttons)</h2>
+                <hr class="border-sysBorder">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- CTA Sólido Principal -->
+                <div class="space-y-6">
+                    <p class="text-sysTextMuted text-sm">Action Primary (Alto Contraste)</p>
+                    <button
+                        class="px-8 py-3 rounded-full bg-white text-black hover:bg-zinc-200 transition-colors duration-300 font-bold tracking-tight tap-down flex items-center gap-3 no-shadows-ever">
+                        <span>Lanzar MVP en Vercel</span>
+                    </button>
+                    <div class="bg-sysGlass p-4 rounded-xl border border-sysBorder font-mono text-xs text-sysTextMuted">
+                        <code>bg-white text-black rounded-full px-8 py-3 tap-down</code>
+                        <p class="mt-2 text-white">Regla: El botón principal JAMÁS es hueco. Siempre es sólido. Falsa la
+                            física de click con la clase `tap-down` (scale: 0.96).</p>
+                    </div>
+                </div>
+
+                <!-- CTA Secundario Muted -->
+                <div class="space-y-6">
+                    <p class="text-sysTextMuted text-sm">Action Secondary (Elevación por Fondo, No Borde)</p>
+                    <button
+                        class="px-8 py-3 rounded-full bg-sysSurfaceHover text-white hover:bg-[#1a1a1a] transition-colors duration-300 font-semibold tracking-tight tap-down flex items-center gap-3 no-shadows-ever">
+                        <span>Descargar PDF</span>
+                    </button>
+                    <div class="bg-sysGlass p-4 rounded-xl border border-sysBorder font-mono text-xs text-sysTextMuted">
+                        <code>bg-[#141414] text-white rounded-full px-8 py-3 tap-down</code>
+                        <p class="mt-2 text-white">Regla: El bloque secundario usa el sysSurfaceHover. Es sutil, pero
+                            tiene peso físico. No tiene borde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CONTENEDORES Y SUPERFICIES -->
+        <section>
+            <div class="mb-8">
+                <h2
+                    class="text-2xl font-bold tracking-tight text-white mb-1 uppercase text-xs opacity-50 tracking-widest font-mono">
+                    03. Surfaces & Elevated Cards (Componentes Bento)</h2>
+                <hr class="border-sysBorder">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Superficie 1: Liquid Glass Modal -->
+                <div class="space-y-4">
+                    <p class="text-sysTextMuted text-sm">Superficie 1: Apple Liquid Glass (Modales / Headers)</p>
+                    <div
+                        class="liquid-glass w-full h-64 rounded-3xl p-8 flex flex-col justify-end relative overflow-hidden tap-down group">
+                        <div
+                            class="w-12 h-1 bg-white/20 rounded-full mx-auto absolute top-4 left-1/2 transform -translate-x-1/2">
+                        </div>
+                        <h3
+                            class="text-2xl font-bold text-white relative z-10 transition-transform duration-300 group-hover:-translate-y-2">
+                            Menú Operativo</h3>
+                        <p
+                            class="text-sysTextMuted text-sm relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            ⌘K activado.</p>
+                    </div>
+                    <div class="bg-sysGlass p-4 rounded-xl border border-sysBorder font-mono text-xs text-sysTextMuted">
+                        <code>backdrop-filter: blur(24px) saturate(180%)</code>
+                        <p class="mt-2 text-white">Regla: Reservado SÓLO para elementos flotantes interactivos modales
+                            (Cmd+K) o cabeceras estancadas (Headers).</p>
+                    </div>
+                </div>
+
+                <!-- Superficie 2: Card Base de Contenido -->
+                <div class="space-y-4">
+                    <p class="text-sysTextMuted text-sm">Superficie 2: Base Card (Proyectos del Bento Grid)</p>
+                    <div
+                        class="w-full h-64 rounded-[2rem] bg-black border border-sysBorder p-8 flex flex-col justify-center transition-colors duration-500 hover:bg-sysSurfaceHover tap-down group relative overflow-hidden no-shadows-ever">
+                        <span
+                            class="inline-block px-3 py-1 text-[10px] font-bold text-black bg-white rounded-full mb-4 self-start">TAG
+                            DE PRODUCCIÓN</span>
+                        <h3
+                            class="text-3xl font-bold text-white mb-2 transition-transform duration-300 group-hover:translate-x-2">
+                            Tarjeta Estándar →</h3>
+                        <p class="text-sysTextMuted text-sm">Cero cristal, 100% solidez. Borde al 10% de blanco.</p>
+                    </div>
+                    <div class="bg-sysGlass p-4 rounded-xl border border-sysBorder font-mono text-xs text-sysTextMuted">
+                        <code>bg-black border-white/10 rounded-[2rem]</code>
+                        <p class="mt-2 text-white">Regla: El contenedor principal para presentar casos de estudio. Cero
+                            Sombras en hover, solo cambio de background a `#141414`.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

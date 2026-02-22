@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const action = item.getAttribute('data-action');
 
                 if (action === 'copy-email') {
-                    navigator.clipboard.writeText('tu_correo@ejemplo.com').then(() => {
+                    navigator.clipboard.writeText('vargashurtadoarmando@gmail.com').then(() => {
                         const originalText = item.textContent;
                         item.textContent = '¡Email Copiado al Portapapeles!';
                         item.classList.add('text-white', 'font-bold');
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 1500);
                     });
                 } else if (action === 'goto-linkedin') {
-                    window.open('https://linkedin.com/in/tu_perfil', '_blank');
+                    window.open('https://www.linkedin.com/in/armando-vargas-hurtado/', '_blank');
                     closeCmdModal();
                 } else if (action === 'filter-projects') {
                     closeCmdModal();
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (copyBtn && copyText) {
             copyBtn.addEventListener('click', () => {
-                navigator.clipboard.writeText('tu_correo@ejemplo.com').then(() => {
+                navigator.clipboard.writeText('vargashurtadoarmando@gmail.com').then(() => {
                     copyText.textContent = '¡Copiado!';
                     copyBtn.classList.add('bg-white', 'text-black');
 
