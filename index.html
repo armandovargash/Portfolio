@@ -17,7 +17,7 @@
                 extend: {
                     colors: {
                         darkBg: '#000000', /* Pure Black */
-                        darkCard: '#0a0a0a', /* Very dark gray for bento cards */
+                        darkCard: '#000000', /* Enforced Brutalist Pure Black */
                         accent: '#ffffff',
                         accentMuted: '#888888',
                     },
@@ -92,8 +92,12 @@
                 <div class="max-w-3xl space-y-6">
                     <p class="text-lg md:text-2xl text-accentMuted leading-relaxed font-light">
                         No soy un gestor de backlog pasivo; soy un <span class="text-white font-medium">Ingeniero de
-                            Contexto y constructor
-                            especializado en Product Discovery aumentado por Agentes</span> y Product-Market Fit.
+                            Contexto y constructor especializado en Product Discovery aumentado por Agentes</span> y
+                        Product-Market Fit.
+                    </p>
+                    <p class="text-lg md:text-2xl text-accentMuted leading-relaxed font-light">
+                        Mi hábitat natural es la trinchera del Product Discovery: ese caos maravilloso y aterrador de la
+                        fase Zero-to-One donde transformamos la ambigüedad absoluta en rentabilidad pura.
                     </p>
                     <p class="text-lg md:text-2xl text-accentMuted leading-relaxed font-light">
                         Ejecución táctica real. Lanzo MVPs funcionales un 25% más rápido utilizando orquestación de IA y
@@ -110,8 +114,7 @@
 
         <!-- 3.5 Manifiesto (Premium Brutalist Style) -->
         <section id="manifiesto" class="py-24 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-            <div
-                class="bg-[#0a0a0a] border border-white/10 p-8 md:p-12 lg:p-16 rounded-2xl relative overflow-hidden group">
+            <div class="bg-black border border-white/10 p-8 md:p-12 lg:p-16 rounded-2xl relative overflow-hidden group">
                 <!-- Decorative Top Bar -->
                 <div
                     class="absolute top-0 left-0 w-full h-8 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2">
@@ -206,7 +209,7 @@
 
                 <!-- Card 1: GoStretch -->
                 <button type="button"
-                    class="glass-card text-left w-full h-full group relative flex flex-col bg-darkCard border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 md:col-span-2 p-8 lg:p-12 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50"
+                    class="glass-card text-left w-full h-full group relative flex flex-col bg-black border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 md:col-span-2 p-8 lg:p-12 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50"
                     data-project="gostretch">
                     <div class="relative z-10 w-full md:w-2/3 flex flex-col h-full justify-between">
                         <div>
@@ -236,7 +239,7 @@
 
                 <!-- Card 2: Merkit -->
                 <button type="button"
-                    class="glass-card text-left w-full h-full group relative flex flex-col bg-darkCard border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 p-8 lg:p-10 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50"
+                    class="glass-card text-left w-full h-full group relative flex flex-col bg-black border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 p-8 lg:p-10 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50"
                     data-project="merkit">
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div>
@@ -266,7 +269,7 @@
 
                 <!-- Card 3: Montaraz -->
                 <button type="button"
-                    class="glass-card text-left w-full h-full group relative flex flex-col bg-darkCard border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 p-8 lg:p-10 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50 md:col-start-1 md:col-end-2 md:row-start-2"
+                    class="glass-card text-left w-full h-full group relative flex flex-col bg-black border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 p-8 lg:p-10 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50 md:col-start-1 md:col-end-2 md:row-start-2"
                     data-project="bahia" data-link="https://www.montaraz.es">
                     <div class="relative z-10 flex flex-col h-full justify-between">
                         <div>
@@ -275,13 +278,43 @@
                                 PM</span>
                             <h3
                                 class="text-2xl font-bold text-white mb-3 tracking-tight group-hover:translate-x-2 transition-transform duration-300">
-                                Montaraz / Bahía <span
+                                Montaraz Mascotas <span
                                     class="text-accentMuted opacity-0 group-hover:opacity-100 transition-opacity ml-1">→</span>
                             </h3>
                             <p class="text-accentMuted text-sm leading-relaxed">
                                 P&L Ownership. E-commerce funcional usando automatización (Notion + Shopify Plus).
-                                Escalamiento sin deuda técnica.
+                                Escalamiento sin fricción gracias a la Ingeniería de Contexto.
                             </p>
+                        </div>
+                    </div>
+                </button>
+
+                <!-- Card 4: Scratch Game -->
+                <button type="button"
+                    class="glass-card text-left w-full h-full group relative flex flex-col bg-black border border-white/10 rounded-[2rem] overflow-hidden transition-all duration-500 p-8 lg:p-10 hover:bg-[#141414] focus:outline-none focus:ring-2 focus:ring-white/50 md:col-span-2 md:row-start-2"
+                    data-project="scratch">
+                    <div class="relative z-10 flex flex-col h-full justify-between lg:w-2/3">
+                        <div>
+                            <span
+                                class="inline-block px-3 py-1 text-xs font-semibold text-black bg-white rounded-full mb-4">Ingeniería
+                                de Contexto</span>
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                                Validación Lógica (Scratch) <span
+                                    class="text-accentMuted opacity-0 group-hover:opacity-100 transition-opacity ml-1">→</span>
+                            </h3>
+                            <p class="text-accentMuted text-sm md:text-base leading-relaxed">
+                                Vibe Coding aplicado en Zero-to-One. Construcción de sistemas transaccionales complejos
+                                sin deuda técnica usando motores lógicos visuales para iterar bajo presión del mercado.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Aesthetic abstract background element matching brutalist vibe -->
+                    <div
+                        class="absolute right-0 bottom-0 top-0 w-1/2 opacity-5 pointer-events-none flex items-center justify-end overflow-hidden hidden md:flex">
+                        <div
+                            class="text-[14rem] font-sans font-black tracking-tighter leading-none text-white whitespace-nowrap transform translate-x-1/4">
+                            { }
                         </div>
                     </div>
                 </button>
@@ -307,7 +340,7 @@
 
     <!-- Mobile Parity Button (Visible only on md:hidden) -->
     <button id="mobile-cmd-btn"
-        class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden px-6 py-3 bg-[#141414]/90 backdrop-blur-md border border-white/20 rounded-full font-semibold text-white shadow-2xl tracking-tight flex items-center gap-2">
+        class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden px-6 py-3 bg-[#141414]/90 backdrop-blur-md border border-white/20 rounded-full font-semibold text-white tracking-tight flex items-center gap-2">
         <svg class="w-4 h-4 text-accentMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
@@ -318,7 +351,7 @@
     <div id="cmd-modal"
         class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 flex items-start justify-center pt-[15vh] md:pt-[20vh] px-4">
         <div id="cmd-content"
-            class="w-full max-w-2xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-200 flex flex-col glass-card">
+            class="w-full max-w-2xl bg-black border border-white/10 rounded-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-200 flex flex-col glass-card">
             <div class="flex items-center px-4 border-b border-white/10">
                 <svg class="w-5 h-5 text-accentMuted mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -353,7 +386,7 @@
     <div id="project-modal"
         class="fixed inset-0 z-[70] bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6 md:p-12">
         <div id="project-modal-content"
-            class="w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-3xl overflow-hidden flex flex-col max-h-[90vh] transform translate-y-8 opacity-0 transition-all duration-300 relative glass-card">
+            class="w-full max-w-4xl bg-black border border-white/10 rounded-3xl overflow-hidden flex flex-col max-h-[90vh] transform translate-y-8 opacity-0 transition-all duration-300 relative glass-card">
             <button id="close-project-modal"
                 class="absolute top-6 right-6 z-[80] w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors backdrop-blur-md">
                 ✕

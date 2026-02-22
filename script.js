@@ -211,8 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 metrics: 'Vibe Coding',
                 context: 'La ideación es barata; la estructura es clave. En entornos de alta incertidumbre (Zero-to-One), se necesita prototipar la lógica transaccional antes del código. El objetivo: probar sistemas complejos sin escribir ingeniería tradicional.',
                 execution: 'Aplicación pura de Ingeniería de Contexto. Ensamblé un motor lógico funcional en Scratch para validar rápidamente el flujo y someterlo a iteración bajo presión. Una simulación de producto sin el peso histórico corporativo.',
-                stack: ['Lógica Computacional', 'Prototipado', 'Zero-to-One'],
-                iframe: './scratch-game.html'
+                stack: ['Lógica Computacional', 'Prototipado', 'Zero-to-One']
             }
         };
 
@@ -223,11 +222,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const tags = data.stack.map(t => `<span class="px-3 py-1 bg-white/10 text-xs font-semibold rounded-full">${t}</span>`).join('');
 
             let mediaContent = '';
-            if (id === 'gostretch') {
-                // If it's GoStretch, inject the Scratch iframe
+            if (id === 'scratch') {
+                // Perfect responsive wrapper for Scratch iframe to prevent cross-origin sizing issues
                 mediaContent = `
-                    <div class="mt-8 mb-6 rounded-2xl overflow-hidden border border-white/10 bg-black flex justify-center items-center w-full aspect-video md:aspect-auto">
-                        <iframe src="https://scratch.mit.edu/projects/1280941716/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen class="max-w-full h-auto"></iframe>
+                    <div class="p-6 bg-[#141414] border border-white/10 rounded-2xl inline-block mb-6 mt-4">
+                        <p class="text-xl md:text-2xl font-bold text-white tracking-tight">${data.metrics}</p>
+                    </div>
+                    <div class="mt-4 mb-6 flex justify-center items-center w-full">
+                        <div class="relative w-full max-w-[485px] aspect-[485/402] rounded-2xl overflow-hidden border border-white/10 bg-black">
+                            <iframe src="https://scratch.mit.edu/projects/1280941716/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                        </div>
                     </div>
                 `;
             } else if (id === 'bahia') {
@@ -266,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${tags}
                     </div>
                     ${data.link ? `<div class="pt-8"><a href="${data.link}" target="_blank" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:opacity-80 transition-opacity inline-flex items-center gap-2 tracking-tight">Ver Producto en Vivo <span class="text-sm">↗</span></a></div>` : ''}
-                    ${data.iframe ? `<div class="pt-8 w-full"><div class="w-full aspect-video bg-black border border-white/10 rounded-2xl overflow-hidden relative"><iframe src="${data.iframe}" class="absolute inset-0 w-full h-full border-0"></iframe></div></div>` : ''}
                 </div>
             `;
 
