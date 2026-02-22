@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="mb-8">
                         <a href="https://montaraz.wixsite.com/bahia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors">
-                            Ver Proyecto en Vivo (Wix) <span>↗</span>
+                            [ Acceder a Producción ] <span>↗</span>
                         </a>
                     </div>
                 `;
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="flex flex-wrap gap-2 pt-6">
                         ${tags}
                     </div>
-                    ${data.link ? `<div class="pt-8"><a href="${data.link}" target="_blank" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:opacity-80 transition-opacity inline-flex items-center gap-2 tracking-tight">Ver Producto en Vivo <span class="text-sm">↗</span></a></div>` : ''}
+                    ${data.link ? `<div class="pt-8"><a href="${data.link}" target="_blank" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:opacity-80 transition-opacity inline-flex items-center gap-2 tracking-tight">[ Acceder a Producción ] <span class="text-sm">↗</span></a></div>` : ''}
                 </div>
             `;
 
