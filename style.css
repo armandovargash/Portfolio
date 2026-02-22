@@ -48,19 +48,37 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Coreografía de Animación fadeInUp */
+/* Coreografía de Animación fadeInUp con Apple Spring */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(20px) scale(0.98);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInUp 0.6s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+/* Jony Ive Apple Design Physics Utilities */
+.liquid-glass {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.spring-transition {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.tap-down:active {
+    transform: scale(0.98);
+    transition-duration: 100ms !important;
+    transition-timing-function: ease-out !important;
 }
