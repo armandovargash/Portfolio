@@ -1,26 +1,27 @@
-# Skill Creator
+# Creador de Skills (Metaprogramación)
 
-## 1. Description & Objective
-Acts as the systems engineer for the Senior Innovation PM. Generates new, standardized agent skills enforcing the Zero-to-One and De-Risking methodology.
+## 1. Descripción y Objetivo
+Actúa como el ingeniero de sistemas del Senior Innovation PM. Genera nuevas habilidades estandarizadas para el agente, imponiendo la metodología Zero-to-One y de De-Risking.
 
-## 2. Trigger (When to activate)
-Activate ONLY when the user explicitly asks to "create a skill", "systematize a process", or "build a new agent ability".
+## 2. Disparador (Cuándo activar)
+Actívalo ÚNICAMENTE cuando el usuario pida explícitamente "crear una skill", "sistematizar un proceso" o "construir una nueva habilidad de agente".
 
-## 3. Execution Rules & Validation Checklist (De-Risking)
-**Execution Rules:**
-- ALWAYS create a new folder for the requested skill using `kebab-case` naming convention [1].
-- Inside that new folder, ALWAYS create a file named exactly `SKILL.md` [1].
-- The generated `SKILL.md` file MUST strictly contain the following four sections in English:
-    1. **Description & Objective:** <15 words defining what it does and the pain it solves.
-    2. **Trigger:** Exact context for when the agent should activate it.
-    3. **Execution Rules & Validation Checklist:** Step-by-step instructions, strict restrictions (what NOT to do), and binary (Yes/No) review criteria.
-    4. **Iteration & Feedback:** A final prompt to adjust the output.
+## 3. Reglas de Ejecución y Checklist de Validación
+**Reglas de Ejecución:**
+- SIEMPRE crea una nueva carpeta para la habilidad solicitada usando la convención `kebab-case`.
+- Dentro de esa nueva carpeta, SIEMPRE crea un archivo llamado exactamente `SKILL.md`.
+- El archivo `SKILL.md` generado DEBE contener estrictamente las siguientes cuatro secciones en español:
+    1. **Descripción y Objetivo:** Menos de 15 palabras definiendo qué hace y qué problema resuelve.
+    2. **Disparador (Cuándo activar):** Contexto exacto de cuándo el agente debe activarla.
+    3. **Reglas de Ejecución y Checklist de Validación:** Instrucciones paso a paso, restricciones estrictas (qué NO hacer) y criterios de revisión binarios (Sí/No).
+    4. **Iteración y Feedback:** Una indicación final para ajustar el resultado.
 
-**Validation Checklist (Binary Check before delivering to user):**
-- [ ] Was a new folder created with `kebab-case`?
-- [ ] Is the main file named exactly `SKILL.md`?
-- [ ] Does the `SKILL.md` contain the 4 mandatory structural sections?
-- [ ] Is the generated skill completely in English?
+**Checklist de Validación (Revisión binaria antes de entregar):**
+- [ ] ¿Se creó una nueva carpeta con `kebab-case`?
+- [ ] ¿El archivo principal se llama exactamente `SKILL.md`?
+- [ ] ¿Contiene el `SKILL.md` las 4 secciones estructurales obligatorias en español?
+- [ ] ¿La habilidad generada redacta sus instrucciones respetando la voz operativa de `agent/rules/voz_armando.md`?
 
-## 4. Iteration & Feedback
-Once generated, ask the user: "Skill skeleton created. Please review the validation checklist. Are there any strict constraints or binary validations you want to add before we lock this skill for production?"
+## 4. Iteración y Feedback
+Una vez generada y guardada la habilidad, pregunta al usuario: 
+*"Esqueleto de la skill creado. Por favor, revisa el checklist de validación. ¿Hay alguna restricción estricta adicional que quieras añadir antes de bloquear esta habilidad para producción?"*

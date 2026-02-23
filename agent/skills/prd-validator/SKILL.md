@@ -1,24 +1,25 @@
-# PRD Validator
+# Validador de PRD (De-Risking de Producto)
 
-## 1. Description & Objective
-Evaluates Product Requirements Documents (PRDs) against the 2026 PM standards, ensuring they focus on AI FinOps, rapid validation (Vibe Coding), and the "3x Rule" for ROI.
+## 1. Descripción y Objetivo
+Evalúa los Documentos de Requisitos de Producto (PRDs) contra los estándares de Product Management, asegurando que se centren en FinOps de IA, validación rápida (Vibe Coding) y la regla del "3x ROI".
 
-## 2. Trigger (When to activate)
-Activate whenever the user provides a PRD, feature idea, or project scope for review, or asks to "validate this concept".
+## 2. Disparador (Cuándo activar)
+Actívalo siempre que el usuario proporcione un PRD, una idea de funcionalidad o un alcance de proyecto para revisión, o cuando pida "validar este concepto".
 
-## 3. Execution Rules & Validation Checklist (De-Risking)
-**Execution Rules:**
-- ALWAYS critique the document based on business viability and "Time-to-Market", not just feature completeness.
-- MUST demand evidence of "Product Discovery". If the PRD relies on intuition without data or agent-driven synthesis, flag it immediately.
-- Enforce the "3x Rule": Does the proposed feature project a value (LTV/Retention) at least 3x the cost of its AI inference/compute? If not defined, ask for it.
-- Suggest "De-Risking" strategies: How can this be tested in days (e.g., via Vibe Coding) before committing central engineering resources?
-- Do NOT rewrite the PRD entirely unless asked; provide surgical, strategic feedback.
+## 3. Reglas de Ejecución y Checklist de Validación
+**Reglas de Ejecución:**
+- SIEMPRE critica el documento basándote en la viabilidad del negocio y el "Time-to-Market", no solo en la completitud técnica de la funcionalidad.
+- EXIGE evidencia de "Product Discovery". Si el PRD se basa en intuición sin datos o sin síntesis impulsada por agentes, señálalo inmediatamente.
+- Haz cumplir la "Regla 3x": ¿La funcionalidad propuesta proyecta un valor (LTV/Retención) de al menos 3 veces el coste de su inferencia/cómputo de IA? Si no está definido, exígelo.
+- Sugiere estrategias de "De-Risking": ¿Cómo se puede probar esto en días (ej. vía Vibe Coding) antes de comprometer recursos centrales de ingeniería?
+- NO reescribas el PRD por completo a menos que se te pida; proporciona feedback quirúrgico y estratégico.
 
-**Validation Checklist (Binary Check before delivering to user):**
-- [ ] Did you evaluate the PRD for AI FinOps / Unit Economics?
-- [ ] Did you challenge the discovery process (is it data-backed)?
-- [ ] Did you propose a faster "De-Risking" prototype method?
-- [ ] Is the output completely in English?
+**Checklist de Validación (Revisión binaria antes de entregar):**
+- [ ] ¿Evaluaste el PRD en términos de AI FinOps / Unit Economics?
+- [ ] ¿Cuestionaste el proceso de descubrimiento (está respaldado por datos)?
+- [ ] ¿Propusiste un método de prototipado más rápido para mitigar riesgos (De-Risking)?
+- [ ] ¿El feedback mantiene el tono directo y realista exigido en `agent/rules/voz_armando.md`?
 
-## 4. Iteration & Feedback
-Skill skeleton created. Please review the validation checklist. Are there any strict constraints or binary validations you want to add before we lock this skill for production?
+## 4. Iteración y Feedback
+Una vez generado el análisis, pregunta al usuario:
+*"Validación de PRD completada. He detectado los puntos de mayor fricción y riesgo. ¿Ajustamos el alcance para mejorar el Time-to-Market o ejecutamos este plan?"*
